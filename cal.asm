@@ -20,7 +20,7 @@ parse_res DWORD 0
 .code
 
 ;................................................
-; function name : step_mul
+; function name :step_mul
 ;................................................
 step_mul PROC
 mov multiple_res,1                   ;multiple_res=1
