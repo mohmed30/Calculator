@@ -19,6 +19,32 @@ parse_res DWORD 0
 
 .code
 
+;................................................
+; function name : mul_fa
+;................................................
+mov multiple_res,1                   ;multiple_res=1
+xor esi ,esi                         ; it make esi=0  (xor if 2 is equal result is zero )
+xor edi, edi                         ;it make edi=0  
+xor ecx, ecx                         ;it make ecx=0  
+lea edx, s_temporary2                ; move the offset address of s_temporary2 to edx
+
+L1:
+      mov bl, [s_temporary1 + esi]
+      CMP bl,0                        ; if bl!=0 continue 
+      JE End_Cont                     ; if bl=0 jump to End_Cont
+      CMP bl,s_multiple               ;if bl!=s_multiple continue
+      JE MUL_Cont                     ;if bl=s_multiple jump to MUL_Cont
+      CMP bl, s_division              ;if bl!=s_division continue
+      JE DIV_Cont                     ;if bl=s_division jump to DIV_Cont
+      mov [s_temporary2 + edi], bl
+	inc ecx
+	
+Inc_lbl :
+         inc esi                       ;esi=esi+1
+         inc edi                       ;edi=edi+1
+         JMP L1                        ; return to L1
+
+
 ;..................................................
 ;function name : resetstemporary1 
 ;description : it reset all values in array 
