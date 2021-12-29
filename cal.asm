@@ -20,8 +20,9 @@ parse_res DWORD 0
 .code
 
 ;................................................
-; function name : mul_fa
+; function name : step_mul
 ;................................................
+step_mul PROC
 mov multiple_res,1                   ;multiple_res=1
 xor esi ,esi                         ; it make esi=0  (xor if 2 is equal result is zero )
 xor edi, edi                         ;it make edi=0  
