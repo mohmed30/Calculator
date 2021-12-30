@@ -3,19 +3,13 @@ includelib \masm32\lib\user32.lib
 
 .data
 
-x_l=100                                                         ;Array length
-string_equ BYTE A_l+1 DUP(?), 0                                 ; string input equation
-s_temporary1 BYTE A_l+1 DUP(?), 0                                    ; temporary use 
-s_temporary2 BYTE A_l+1 DUP(?), 0
-s_addition BYTE '+'                                                  ; creat a byte memory loction and store char+
-s_submission BYTE '-'
-s_multiple BYTE '*'
-s_division BYTE '/'
-r_addition BYTE '+'
-r_multiple BYTE '*'
-addition_res DWORD 0                                              ; creat a double word memory loction and set 0 in it
-multiple_res DWORD 1
-parse_res DWORD 0 
+msg1:    db      "1-Add",0dh,0ah,"2-Multiply",0dh,0ah,"3-Subtract",0dh,0ah,"4-Divide", 0Dh,0Ah, '$'
+msg2:    db      0dh,0ah,"Enter First No : $"
+msg3:    db      0dh,0ah,"Enter Second No : $"
+msg4:    db      0dh,0ah,"Choice Error $" 
+msg5:    db      0dh,0ah,"Result : $" 
+msg6:    db      0dh,0ah ,'thank you for using the calculator! press any key... ', 0Dh,0Ah, '$'
+
 
 .code
 
