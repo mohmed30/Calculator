@@ -19,7 +19,7 @@ start:
         mov ah, 0                       
         int 16h  
         cmp al, 31h 
-        je Add
+        je Addtion
         cmp al, 32h
         je Multiply
         cmp al, 33h
@@ -32,7 +32,7 @@ start:
         mov ah, 0
         int 16h
         jmp start
- Add:
+ Addtion:
  
  
  Multiply:
