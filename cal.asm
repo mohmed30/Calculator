@@ -12,4 +12,24 @@ msg6:    db      0dh,0ah ,'thank you for using the calculator! press any key... 
 
 
 .code
+start:  
+        mov ah, 9
+        mov dx, offset msg1 
+        int 21h
+        mov ah, 0                       
+        int 16h  
+        cmp al, 31h 
+        je Add
+        cmp al, 32h
+        je Multiply
+        cmp al, 33h
+        je Subtract
+        cmp al, 34h
+        je Divide
+        mov ah, 9
+        mov dx, offset msg4
+        int 21h
+        mov ah, 0
+        int 16h
+        jmp start
 
