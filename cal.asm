@@ -32,4 +32,15 @@ start:
         mov ah, 0
         int 16h
         jmp start
-
+ Add:
+ 
+ 
+ Multiply:
+ 
+ 
+ Subtract:
+ 
+ 
+ 
+ Divide:
+ 
