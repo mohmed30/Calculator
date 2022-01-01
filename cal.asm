@@ -6,7 +6,7 @@ atoi PROTO C strptr:DWORD
 include irvine32.inc
 
 .data
-
+z = 0
 A_l=100                                                         ;Array length
 string_equ BYTE A_l+1 DUP(?), 0                                 ; string input equation
 s_temp1 BYTE A_l+1 DUP(?), 0                                    ; temporary use 
